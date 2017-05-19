@@ -1,0 +1,49 @@
+/*建立setup-grid 混合器*/
+
+
+/*可放到https://codepen.io/pen 去產生css*/
+
+@mixin setup-grid($deviceName) {
+    @for $i from 1 through 12 {
+        .col-#{$deviceName}-#{$i} {
+            width: calc(100% * #{$i} / 12);
+        }
+    }
+}
+
+
+/*使用setup-grid混合器*/
+
+
+/*手機板用網格*/
+
+@include setup-grid('xs');
+
+/*使用setup-grid混合器,需空行*/
+
+
+/*平板板用網格*/
+
+@media screen and ( min-width:768px) {
+    @include setup-grid('sm');
+}
+
+
+/*使用setup-grid混合器,需空行*/
+
+
+/*一般PC用網格*/
+
+@media screen and ( min-width:992px) {
+    @include setup-grid('md');
+}
+
+
+/*使用setup-grid混合器,需空行*/
+
+
+/*大螢幕用網格*/
+
+@media screen and ( min-width:1200px) {
+    @include setup-grid('lg');
+}
