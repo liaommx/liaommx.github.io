@@ -5,8 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../final_project/css/style.css">
     <link rel="stylesheet" href="./iphone.css">
     <title>CK Iphone homework</title>
+    <script language="javascript" type='text/javascript' src="final_project/js/jquery-1.9.1.min.js">
+    </script>
+    <script language="javascript" type='text/javascript'>
+        $(function () {
+            $(window).load(function () {
+                $(window).bind('scroll resize', function () {
+                    var $this = $(this);
+                    var $this_Top = $this.scrollTop();
+
+
+
+                    $('#menu').stop().animate({
+                        bottom: "0px"
+                    });
+
+                }).scroll();
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -25,7 +45,11 @@
         <div class="box2"></div>
     </div>
 
-
+    <div id="menu">
+        <a href="../homework1.html">Homework1</a>
+        <a href="#">Homework2</a>
+        <a href="../final_project/index.html">Final Project</a>
+    </div>
 
 </body>
 
